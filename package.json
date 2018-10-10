@@ -1,7 +1,7 @@
 {
   "name": "sigfox-cli",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "Sigfox CLI utils",
   "main": "main.js",
   "bin": {
   	"sigfox-cli": "bin/sigfox-cli.js"
@@ -11,6 +11,10 @@
     "start": "node main.js",
     "test": "node main.js payload 2eff17fefc00e90100000000"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Cristiano Caldas",
+  "license": "MIT",
+  "repository": {
+	  "type" : "git",
+	  "url" : "https://github.com/cccaldas/sigfox-cli"
+	}
 }
