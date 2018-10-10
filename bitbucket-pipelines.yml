@@ -1,0 +1,15 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          deployment: production
+          image: node:8.9.0
+          caches:
+            - node
+          script:
+            - npm install
+            - npm install -g npm-cli-login publish
+            # npm run lint
+            # npm run test
+            - npm-cli-login -u $NPM_USER -p $NPM_PASSWORD -e $NPM_EMAIL
+            - npm publish
